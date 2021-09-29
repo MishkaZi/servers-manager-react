@@ -13,7 +13,7 @@ const ServerCard: React.FC<{ server: ServerModel }> = (props) => {
       newServer.status = status === 1 ? 0 : 1;
 
       const response = await Axios.put(
-        `http://localhost:3001/servers/`,
+        `https://servers-manager.herokuapp.com/servers/`,
         newServer
       );
 

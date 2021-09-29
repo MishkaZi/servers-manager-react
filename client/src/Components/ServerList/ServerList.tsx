@@ -21,7 +21,7 @@ function ServerList() {
   const getServersFromDB = async () => {
     try {
       const servers = await Axios.get<ServerModel[]>(
-        'http://localhost:3001/servers/'
+        'https://servers-manager.herokuapp.com/servers/'
       );
 
       dispatch(setServersAction(servers.data));
